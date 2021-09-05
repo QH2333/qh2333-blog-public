@@ -3,11 +3,11 @@
   <title>QH2333&#39;s blog</title>
   
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="/qh2333-blog-public/atom.xml" rel="self"/>
   
-  <link href="https://blog.qh2333.com/"/>
+  <link href="https://qh2333.github.io/qh2333-blog-public/"/>
   <updated>2020-11-18T15:51:41.704Z</updated>
-  <id>https://blog.qh2333.com/</id>
+  <id>https://qh2333.github.io/qh2333-blog-public/</id>
   
   <author>
     <name>QH2333</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>具象网络科普(1) - 局域网</title>
-    <link href="https://blog.qh2333.com/2020/11/15/tangible-network-01/"/>
-    <id>https://blog.qh2333.com/2020/11/15/tangible-network-01/</id>
+    <link href="https://qh2333.github.io/qh2333-blog-public/2020/11/15/tangible-network-01/"/>
+    <id>https://qh2333.github.io/qh2333-blog-public/2020/11/15/tangible-network-01/</id>
     <published>2020-11-15T11:13:42.000Z</published>
     <updated>2020-11-18T15:51:41.704Z</updated>
     
@@ -35,14 +35,14 @@
     
     
     
-      <category term="网络" scheme="https://blog.qh2333.com/tags/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://qh2333.github.io/qh2333-blog-public/tags/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title>Aweful C/C++</title>
-    <link href="https://blog.qh2333.com/2020/03/12/aweful-c/"/>
-    <id>https://blog.qh2333.com/2020/03/12/aweful-c/</id>
+    <link href="https://qh2333.github.io/qh2333-blog-public/2020/03/12/aweful-c/"/>
+    <id>https://qh2333.github.io/qh2333-blog-public/2020/03/12/aweful-c/</id>
     <published>2020-03-12T11:25:02.000Z</published>
     <updated>2020-03-12T13:00:12.905Z</updated>
     
@@ -56,14 +56,14 @@
     
     
     
-      <category term="编程" scheme="https://blog.qh2333.com/tags/%E7%BC%96%E7%A8%8B/"/>
+      <category term="编程" scheme="https://qh2333.github.io/qh2333-blog-public/tags/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>网络迷思</title>
-    <link href="https://blog.qh2333.com/2020/03/11/network-myth/"/>
-    <id>https://blog.qh2333.com/2020/03/11/network-myth/</id>
+    <link href="https://qh2333.github.io/qh2333-blog-public/2020/03/11/network-myth/"/>
+    <id>https://qh2333.github.io/qh2333-blog-public/2020/03/11/network-myth/</id>
     <published>2020-03-11T02:05:19.000Z</published>
     <updated>2020-11-14T14:32:34.789Z</updated>
     
@@ -79,14 +79,14 @@
     
     
     
-      <category term="网络" scheme="https://blog.qh2333.com/tags/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://qh2333.github.io/qh2333-blog-public/tags/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title>一个简单的作业跟踪工具</title>
-    <link href="https://blog.qh2333.com/2020/03/04/endless-homework/"/>
-    <id>https://blog.qh2333.com/2020/03/04/endless-homework/</id>
+    <link href="https://qh2333.github.io/qh2333-blog-public/2020/03/04/endless-homework/"/>
+    <id>https://qh2333.github.io/qh2333-blog-public/2020/03/04/endless-homework/</id>
     <published>2020-03-04T01:57:03.000Z</published>
     <updated>2020-07-18T04:46:37.761Z</updated>
     
@@ -100,14 +100,14 @@
     
     
     
-      <category term="网站" scheme="https://blog.qh2333.com/tags/%E7%BD%91%E7%AB%99/"/>
+      <category term="网站" scheme="https://qh2333.github.io/qh2333-blog-public/tags/%E7%BD%91%E7%AB%99/"/>
     
   </entry>
   
   <entry>
     <title>文档和教程</title>
-    <link href="https://blog.qh2333.com/2020/02/22/doc-and-tutorials/"/>
-    <id>https://blog.qh2333.com/2020/02/22/doc-and-tutorials/</id>
+    <link href="https://qh2333.github.io/qh2333-blog-public/2020/02/22/doc-and-tutorials/"/>
+    <id>https://qh2333.github.io/qh2333-blog-public/2020/02/22/doc-and-tutorials/</id>
     <published>2020-02-22T02:41:53.000Z</published>
     <updated>2020-03-29T08:50:15.224Z</updated>
     
@@ -121,14 +121,14 @@
     
     
     
-      <category term="课程" scheme="https://blog.qh2333.com/tags/%E8%AF%BE%E7%A8%8B/"/>
+      <category term="课程" scheme="https://qh2333.github.io/qh2333-blog-public/tags/%E8%AF%BE%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>记家庭局域网的千兆升级历程</title>
-    <link href="https://blog.qh2333.com/2020/02/12/upgrading-to-gigabit-lan/"/>
-    <id>https://blog.qh2333.com/2020/02/12/upgrading-to-gigabit-lan/</id>
+    <link href="https://qh2333.github.io/qh2333-blog-public/2020/02/12/upgrading-to-gigabit-lan/"/>
+    <id>https://qh2333.github.io/qh2333-blog-public/2020/02/12/upgrading-to-gigabit-lan/</id>
     <published>2020-02-12T13:15:00.000Z</published>
     <updated>2020-11-14T14:29:46.641Z</updated>
     
@@ -142,7 +142,7 @@
     
     
     
-      <category term="网络" scheme="https://blog.qh2333.com/tags/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://qh2333.github.io/qh2333-blog-public/tags/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
