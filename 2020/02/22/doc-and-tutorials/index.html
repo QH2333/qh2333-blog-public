@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.qh2333.com","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="最近学的东西比较杂乱，其中像Web、Python、Data Mining这类东西又有数不清的框架，寻找合适的学习资料有种披荆斩棘的感觉。所以，我在这里记录下那些我觉得优秀的文档和教程，当作一个索引。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="文档和教程">
+<meta property="og:url" content="https://blog.qh2333.com/2020/02/22/doc-and-tutorials/">
+<meta property="og:site_name" content="QH2333&#39;s blog">
+<meta property="og:description" content="最近学的东西比较杂乱，其中像Web、Python、Data Mining这类东西又有数不清的框架，寻找合适的学习资料有种披荆斩棘的感觉。所以，我在这里记录下那些我觉得优秀的文档和教程，当作一个索引。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-22T02:41:53.000Z">
+<meta property="article:modified_time" content="2020-03-29T08:50:15.224Z">
+<meta property="article:author" content="QH2333">
+<meta property="article:tag" content="课程">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://blog.qh2333.com/2020/02/22/doc-and-tutorials/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>文档和教程 | QH2333's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="QH2333's blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">QH2333's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.qh2333.com/2020/02/22/doc-and-tutorials/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="QH2333">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="QH2333's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          文档和教程
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-22 10:41:53" itemprop="dateCreated datePublished" datetime="2020-02-22T10:41:53+08:00">2020-02-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-29 16:50:15" itemprop="dateModified" datetime="2020-03-29T16:50:15+08:00">2020-03-29</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>　　最近学的东西比较杂乱，其中像Web、Python、Data Mining这类东西又有数不清的框架，寻找合适的学习资料有种披荆斩棘的感觉。所以，我在这里记录下那些我觉得优秀的文档和教程，当作一个索引。</p>
+<a id="more"></a>
+<p>　　注：这里的推荐默认你具有外网访问条件，且优先列出官方的或者英文的资源。</p>
+<h2 id="web">Web</h2>
+<p><a href="https://www.youtube.com/playlist?list=PLhQjrBD2T382hIW-IsOVuXP1uMzEvmcE5" target="_blank" rel="noopener">Harvard_CS50's Web Programming with Python and JavaScript</a></p>
+<h3 id="htmlcss">HTML/CSS</h3>
+<p><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">Mozilla_MDN Web Docs</a>（<a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener">MDN Web文档</a>）</p>
+<p><a href="https://material.io/" target="_blank" rel="noopener">Google_Material Design</a></p>
+<h3 id="jquery">jQuery</h3>
+<h3 id="bootstrap">Bootstrap</h3>
+<p><a href="https://getbootstrap.com/docs/4.4/getting-started/introduction/" target="_blank" rel="noopener">Official Documentation</a></p>
+<h3 id="echarts">ECharts</h3>
+<p><a href="https://echarts.apache.org/zh/index.html" target="_blank" rel="noopener">官网</a></p>
+<hr />
+<h2 id="cc">C/C++</h2>
+<p><a href="http://www.cplusplus.com/" target="_blank" rel="noopener">cplusplus.com</a></p>
+<p><a href="https://en.cppreference.com/" target="_blank" rel="noopener">CPP Reference</a> （<a href="https://zh.cppreference.com/" target="_blank" rel="noopener">中文版</a>）</p>
+<h3 id="keil-cx51">Keil Cx51</h3>
+<p><a href="http://www.keil.com/support/man/docs/c51/c51_intro.htm" target="_blank" rel="noopener">C51 Docs</a></p>
+<hr />
+<h2 id="c">C#</h2>
+<p><a href="https://docs.microsoft.com/zh-cn/dotnet/csharp/" target="_blank" rel="noopener">C# 文档</a></p>
+<p><a href="https://channel9.msdn.com/Series/CSharp-101/" target="_blank" rel="noopener">C# 101 (Tutorial)</a></p>
+<hr />
+<h2 id="python">Python</h2>
+<h3 id="lanuage">Lanuage</h3>
+<p><a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP63WbdFxL8giv4yhgdMGaZNA" target="_blank" rel="noopener">MIT_6.0001</a></p>
+<p><a href="https://docs.python.org/3/tutorial/index.html" target="_blank" rel="noopener">The Python Tutorial</a>（<a href="https://docs.python.org/zh-cn/3/tutorial/index.html" target="_blank" rel="noopener">Python官方中文教程</a>）</p>
+<p><a href="https://docs.python.org/3/library/index.html" target="_blank" rel="noopener">The Python Standard Library</a>（<a href="https://docs.python.org/zh-cn/3/library/index.html" target="_blank" rel="noopener">Python标准库</a>）</p>
+<p><a href="https://python3-cookbook.readthedocs.io/zh_CN/latest/index.html" target="_blank" rel="noopener">Python3 Cookbook</a></p>
+<h3 id="numpy">Numpy</h3>
+<p><a href="https://youtu.be/V0D2mhVt7NE" target="_blank" rel="noopener">Intro to Numerical Computing with NumPy</a></p>
+<h3 id="pandas">Pandas</h3>
+<p><a href="https://pandas.pydata.org/" target="_blank" rel="noopener">Official Website</a></p>
+<p><a href="https://pandas.pydata.org/docs/getting_started/10min.html" target="_blank" rel="noopener">Getting Started</a></p>
+<p><a href="https://pandas.pydata.org/docs/reference/index.html" target="_blank" rel="noopener">API Reference</a></p>
+<h3 id="geopandas">geopandas</h3>
+<p><a href="https://geopandas.org/" target="_blank" rel="noopener">Documentation</a></p>
+<h3 id="matplotlib">Matplotlib</h3>
+<p><a href="https://matplotlib.org/" target="_blank" rel="noopener">Official Website</a></p>
+<p><a href="https://matplotlib.org/tutorials/index.html" target="_blank" rel="noopener">Tutorial</a></p>
+<p><a href="https://matplotlib.org/contents.html" target="_blank" rel="noopener">Documentation</a></p>
+<h3 id="folium">Folium</h3>
+<p><a href="https://python-visualization.github.io/folium/" target="_blank" rel="noopener">Documentation</a></p>
+<hr />
+<h2 id="data-science">Data science</h2>
+<h3 id="hadoop">Hadoop</h3>
+<p><a href="http://file.qh2333.com/books/Hadoop%20-%20The%20Definitive%20Guide,%204th%20Edition.pdf" target="_blank" rel="noopener">Hadoop: The definite guide</a></p>
+<h3 id="spark">Spark</h3>
+<p><a href="https://spark-reference-doc-cn.readthedocs.io/zh_CN/latest/index.html" target="_blank" rel="noopener">Spark 2.2.x 中文官方参考文档</a></p>
+<p><a href="http://dblab.xmu.edu.cn/blog/1709-2/" target="_blank" rel="noopener">子雨大数据之PySpark入门教程</a></p>
+<p><a href="http://spark.apache.org/docs/2.0.0/api/python/index.html" target="_blank" rel="noopener">PySpark API Docs</a></p>
+<h3 id="flume">Flume</h3>
+<p><a href="http://flume.apache.org/index.html" target="_blank" rel="noopener">Official Website</a></p>
+<p><a href="http://flume.apache.org/releases/content/1.9.0/FlumeUserGuide.html" target="_blank" rel="noopener">Official Documentation</a> (<a href="https://flume.liyifeng.org/" target="_blank" rel="noopener">中文翻译</a>)</p>
+<h3 id="kafka">Kafka</h3>
+<hr />
+<h2 id="information-retrieval-search-engine">Information retrieval &amp; Search engine</h2>
+<p><a href="https://nlp.stanford.edu/IR-book/information-retrieval-book.html" target="_blank" rel="noopener">Stanford_IR</a></p>
+<hr />
+<h2 id="contributors">Contributors</h2>
+<ul>
+<li>KT.
+<ol type="1">
+<li>Material design</li>
+</ol></li>
+<li><em>More...</em></li>
+</ul>
+<hr />
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%AF%BE%E7%A8%8B/" rel="tag"># 课程</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/02/12/upgrading-to-gigabit-lan/" rel="prev" title="记家庭局域网的千兆升级历程">
+      <i class="fa fa-chevron-left"></i> 记家庭局域网的千兆升级历程
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/03/04/endless-homework/" rel="next" title="一个简单的作业跟踪工具">
+      一个简单的作业跟踪工具 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#web"><span class="nav-number">1.</span> <span class="nav-text">Web</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#htmlcss"><span class="nav-number">1.1.</span> <span class="nav-text">HTML&#x2F;CSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jquery"><span class="nav-number">1.2.</span> <span class="nav-text">jQuery</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bootstrap"><span class="nav-number">1.3.</span> <span class="nav-text">Bootstrap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#echarts"><span class="nav-number">1.4.</span> <span class="nav-text">ECharts</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cc"><span class="nav-number">2.</span> <span class="nav-text">C&#x2F;C++</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#keil-cx51"><span class="nav-number">2.1.</span> <span class="nav-text">Keil Cx51</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c"><span class="nav-number">3.</span> <span class="nav-text">C#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#python"><span class="nav-number">4.</span> <span class="nav-text">Python</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#lanuage"><span class="nav-number">4.1.</span> <span class="nav-text">Lanuage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#numpy"><span class="nav-number">4.2.</span> <span class="nav-text">Numpy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pandas"><span class="nav-number">4.3.</span> <span class="nav-text">Pandas</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#geopandas"><span class="nav-number">4.4.</span> <span class="nav-text">geopandas</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#matplotlib"><span class="nav-number">4.5.</span> <span class="nav-text">Matplotlib</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#folium"><span class="nav-number">4.6.</span> <span class="nav-text">Folium</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#data-science"><span class="nav-number">5.</span> <span class="nav-text">Data science</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hadoop"><span class="nav-number">5.1.</span> <span class="nav-text">Hadoop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spark"><span class="nav-number">5.2.</span> <span class="nav-text">Spark</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flume"><span class="nav-number">5.3.</span> <span class="nav-text">Flume</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kafka"><span class="nav-number">5.4.</span> <span class="nav-text">Kafka</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#information-retrieval-search-engine"><span class="nav-number">6.</span> <span class="nav-text">Information retrieval &amp; Search engine</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#contributors"><span class="nav-number">7.</span> <span class="nav-text">Contributors</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">QH2333</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/QH2333" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;QH2333" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:qi_an_hao@126.com" title="E-Mail → mailto:qi_an_hao@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">苏ICP备20005338号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">QH2333</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.1
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

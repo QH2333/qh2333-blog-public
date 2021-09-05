@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.qh2333.com","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="- 网连不上了。 - 为什么呢？ （一通操作后） - 网又能连上了。 - 为什么呢？？？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络迷思">
+<meta property="og:url" content="https://blog.qh2333.com/2020/03/11/network-myth/">
+<meta property="og:site_name" content="QH2333&#39;s blog">
+<meta property="og:description" content="- 网连不上了。 - 为什么呢？ （一通操作后） - 网又能连上了。 - 为什么呢？？？">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://file.qh2333.com/blog_cache/network_myth/1.png">
+<meta property="og:image" content="https://file.qh2333.com/blog_cache/network_myth/2.png">
+<meta property="og:image" content="https://file.qh2333.com/blog_cache/network_myth/3.png">
+<meta property="article:published_time" content="2020-03-11T02:05:19.000Z">
+<meta property="article:modified_time" content="2020-11-14T14:32:34.789Z">
+<meta property="article:author" content="QH2333">
+<meta property="article:tag" content="网络">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://file.qh2333.com/blog_cache/network_myth/1.png">
+
+<link rel="canonical" href="https://blog.qh2333.com/2020/03/11/network-myth/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>网络迷思 | QH2333's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="QH2333's blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">QH2333's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.qh2333.com/2020/03/11/network-myth/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="QH2333">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="QH2333's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          网络迷思
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-03-11 10:05:19" itemprop="dateCreated datePublished" datetime="2020-03-11T10:05:19+08:00">2020-03-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-14 22:32:34" itemprop="dateModified" datetime="2020-11-14T22:32:34+08:00">2020-11-14</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>- 网连不上了。 - 为什么呢？</p>
+<p>（一通操作后）</p>
+<p>- 网又能连上了。 - 为什么呢？？？</p>
+<a id="more"></a>
+<p>　　初学网络时，想法总是又多又离奇，就差把每种设备每个设置都排列组合一下试试效果。尝试的结果有时能打开新世界的大门，更多时候都让我理解不能（深深为自己什么都不懂感到忧虑）。当然不仅是在搞事的时候，日常使用网络设备也伴随着很多这样那样的困惑。</p>
+<p>　　后来发现，一些看起来奇怪的现象都可以用简单的网络原理来解释（没能把原理和现象联系起来，果然是菜爆了）。所以我就在这里记下那些和网络相关的小问题。</p>
+<p>　　本文属于科普性质，没有太多术语。</p>
+<p>　　本文长期更新。</p>
+<h2 id="始终达不到标称速率的网络">始终达不到标称速率的网络</h2>
+<figure>
+<img src="https://file.qh2333.com/blog_cache/network_myth/1.png" alt="We are upgrading to 10 Gigabit Internet!" /><figcaption aria-hidden="true">We are upgrading to 10 Gigabit Internet!</figcaption>
+</figure>
+<figure>
+<img src="https://file.qh2333.com/blog_cache/network_myth/2.png" alt="But we can only expect 9.8 Gigiabit from the switch?" /><figcaption aria-hidden="true">But we can only expect 9.8 Gigiabit from the switch?</figcaption>
+</figure>
+<figure>
+<img src="https://file.qh2333.com/blog_cache/network_myth/3.png" alt="Damn ISP always get an excuse!" /><figcaption aria-hidden="true">Damn ISP always get an excuse!</figcaption>
+</figure>
+<p>THERE IS OVERHEAD!!!</p>
+<p>　　网速一直是一个比较玄学的概念，买宽带以后运营商最怕用户问这问那，所以总会多给那么百分十几的带宽，用于抵消各种不利因素，让网络看起来“跑满了”。可以自己搭建内网时就没有这种福利了，网络设备上写了多少速度那必不可能再多，从此满速网络成了奢望。那么，缺失的速度都去了哪里呢？</p>
+<h3 id="网络协议开销">网络协议开销</h3>
+<p>　　网络是一个充满协议的地方，为了确保网络的正常运转，网络协议在传送数据时需要知道很多附加信息：数据从哪里发出？应该被谁接收？数据的校验码是多少？通常，这些额外的数据会附加在有效数据上，并且通常不止有一组附加数据。网络术语中，每附加一次数据就是进行了一次<strong>封装</strong>。事实上，我们的数据从电脑内部到达网络接口时，已经经过了层层封装。</p>
+<p>　　网络接口上传送的数据是多次封装后的数据，而我们需要的只是原始的数据。就像一辆卡车能运送10t快递包裹，但是去掉包装后拿到买家手里的货可能只剩下了8t。总传输速率1000Mbps的网络接口，去掉封装后的有效数据传输速率可能只剩960Mbps左右了。</p>
+<h3 id="cpu">CPU</h3>
+<p>　　曾经我从未想过CPU可能成为限制网络速度的因素之一，直到我在路由器上运行了<code>iperf3</code>测速工具。</p>
+<h3 id="硬盘">硬盘</h3>
+<p>　　硬盘自然不必多说，千兆网络100MB/s起步的传输速度已经逼近了机械硬盘的极限，不久以后的万兆网络也会将SATA接口送进历史。想要硬盘不拖后腿？那还是早日使用固态硬盘，最好还是NVMe或者PCIe接口的那种。</p>
+<h2 id="满血信号和残血网速">满血信号和残血网速</h2>
+<p>　　使用学校的公用Wi-Fi时，我发现一个奇怪的现象：同样是满格信号，有的教室网速很快（50Mbps+），有的教室网速就很一般（10Mbps以下）；至于那些信号都无法满格的教室，可能就连网都连不上了。</p>
+<p>　　造成这个问题的主要原因是：学校里发射Wi-Fi信号的装置——<strong>无线AP</strong>，功率太大了！很显然这是一个违背常识的原因，大功率的AP明明应该带来更好的网络质量才对啊！问题在于，AP和移动设备间的通讯并不是单向的。AP的功率很容易提升，于是很大范围内的移动设备都可以接收到它发射的Wi-Fi信号；但反过来说，移动设备的信号发射功率不可能大幅提升（要电池的嘛）。这就造成了在某一片区域中，移动设备能收到AP信号，但AP很难收到移动设备的信号的现象，一旦移动设备进入到了这片区域，即使设备自认为信号不错，双方的通信也无法顺畅进行。</p>
+<p>　　但是，就算是下载文件时，AP和移动设备间的通信也是双向的吗？确实，就拿用手机下载文件的例子来说，这个文件会被分割成很多小片段，然后从服务器上逐一传送过来。这些小片段在传送过程中可能会丢失或者发生错误，服务器为了确保手机能够正确收到所有片段，就要求手机每收到一个片段后向服务器发送一条“确认收到”的信息。一旦某一条“确认收到”的信息迟迟没有被服务器收到，服务器就会认为这个文件片段丢失了，并把它重新发送一次。如果手机发回的“确认收到”不能被AP接收到，那自然不会被网络另一头的服务器收到，于是服务器等待的时间就变长了，网速也就变慢了。</p>
+<p>　　在最合理的情况下，AP在增强信号发射功率的同时也应该同时增强自己接收信号的能力，使得实际的网络质量和信号强度大致呈正比。然而，增强信号接收能力需要更优秀的信号识别算法，这可不是人人都能做的，相比于简单的增强功率简直是吃力不讨好，这自然就催生出了只增强功率，让人乍一看觉得网很好的“作弊”行为。</p>
+<hr />
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag"># 网络</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/04/endless-homework/" rel="prev" title="一个简单的作业跟踪工具">
+      <i class="fa fa-chevron-left"></i> 一个简单的作业跟踪工具
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/03/12/aweful-c/" rel="next" title="Aweful C/C++">
+      Aweful C/C++ <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#始终达不到标称速率的网络"><span class="nav-number">1.</span> <span class="nav-text">始终达不到标称速率的网络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#网络协议开销"><span class="nav-number">1.1.</span> <span class="nav-text">网络协议开销</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cpu"><span class="nav-number">1.2.</span> <span class="nav-text">CPU</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#硬盘"><span class="nav-number">1.3.</span> <span class="nav-text">硬盘</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#满血信号和残血网速"><span class="nav-number">2.</span> <span class="nav-text">满血信号和残血网速</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">QH2333</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/QH2333" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;QH2333" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:qi_an_hao@126.com" title="E-Mail → mailto:qi_an_hao@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">苏ICP备20005338号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">QH2333</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.1
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

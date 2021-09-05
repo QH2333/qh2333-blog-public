@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.qh2333.com","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="百兆网线遇见千兆入户。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记家庭局域网的千兆升级历程">
+<meta property="og:url" content="https://blog.qh2333.com/2020/02/12/upgrading-to-gigabit-lan/">
+<meta property="og:site_name" content="QH2333&#39;s blog">
+<meta property="og:description" content="百兆网线遇见千兆入户。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology1.svg">
+<meta property="og:image" content="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology2.svg">
+<meta property="og:image" content="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology2.1.svg">
+<meta property="og:image" content="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/speedtest_in_sg.jpg">
+<meta property="og:image" content="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology3.svg">
+<meta property="og:image" content="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/ZXHN.png">
+<meta property="og:image" content="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology4.svg">
+<meta property="og:image" content="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology4.1.svg">
+<meta property="article:published_time" content="2020-02-12T13:15:00.000Z">
+<meta property="article:modified_time" content="2020-11-14T14:29:46.641Z">
+<meta property="article:author" content="QH2333">
+<meta property="article:tag" content="网络">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology1.svg">
+
+<link rel="canonical" href="https://blog.qh2333.com/2020/02/12/upgrading-to-gigabit-lan/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>记家庭局域网的千兆升级历程 | QH2333's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="QH2333's blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">QH2333's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.qh2333.com/2020/02/12/upgrading-to-gigabit-lan/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="QH2333">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="QH2333's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          记家庭局域网的千兆升级历程
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-12 21:15:00" itemprop="dateCreated datePublished" datetime="2020-02-12T21:15:00+08:00">2020-02-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-14 22:29:46" itemprop="dateModified" datetime="2020-11-14T22:29:46+08:00">2020-11-14</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>百兆网线遇见千兆入户。</p>
+<a id="more"></a>
+<p><em>注1：唠嗑和吐槽居多，想学到什么东西大概不现实（逃</em></p>
+<p><em>注2：前面很大的篇幅都是在介绍家里网络的演进，不想看的话可以直接跳到<a href="#%E5%8F%82%E6%95%B0%E8%B5%B7%E5%BA%95"><strong>参数起底</strong></a>部分</em></p>
+<h2 id="开始的时候">开始的时候</h2>
+<p>在很久以前，没有“提速降费”的黑暗年代里，我在家里一直用着广电和移动给穷人提供的小水管宽带。十多年来，网速从2Mbps磕磕绊绊提升到了2019年中旬的50Mbps。</p>
+<p>那个时候，家里的网络结构大概是这个样子的：</p>
+<p><img src="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology1.svg" alt="P1. 网络拓扑1.0"/></p>
+<p>有两个地方需要大概说一下。</p>
+<ol type="1">
+<li><p>这图是用Visio画的，虽然用的是最新的2019版本，但是我依然没有找到任何类似于无线路由器的图标。从原理上讲，我们称呼为“无线路由器”的这个东西其实是<strong>极简路由器+交换机+无线AP</strong>的组合，这三个设备由厂家帮我们塞进了一个壳子里，所以在这里我也就画成三样东西的组合了。当然，如果有同学知道Visio怎么画出无线路由器，也可以在评论里告诉我（尽管tkl大佬指出我还没有评论区）。</p></li>
+<li><p>手机用Wi-Fi上网，为什么电脑用的也是Wi-Fi呢？因为之前家里的台式电脑和无线路由器都放在客厅里，只不过分别位于两侧。这种情况下如果在客厅中间走一根网线那实在不够优雅，考虑到中间没有任何障碍物，所以台式机也就用无线网卡上网了（淘宝爆款300M无线网卡）。</p></li>
+</ol>
+<p>当时还是网络小白的我用着这套极简组网方案（一共只有一个猫和一个路由器，路由器甚至直接了WAN口），虽然总是隐隐觉得网速不怎么好，但毕竟能用嘛，也就没有多考虑。</p>
+<h2 id="事情变得复杂起来">事情变得复杂起来</h2>
+<p>除了一台主力台式机以外，家里还有一台退役的老台式。为了解决我和我爸同时占用电脑的问题，我们决定把老的台式机升级一下硬件继续用起来，位置呢在主卧里。家里的户型是L型的，之前的路由器和老台式机分别在L的两端，中间隔着两堵墙，无线方案行不通。还好装修的时候在墙里预留了网线，我只要去入户信息箱里找到那根网线然后手工压上水晶头就行（信息箱乱得很，辱骂装修施工队），老台式机成功有线连网。</p>
+<p>这时候，爸妈在手机上上网的频率也高了起来，日益增长的网络需求同不充分的无线网络部署之间的矛盾凸显。为了初步解决这个问题，我又在主卧里接上了第二个淘宝爆款路由器，和客厅的主路由器形成级联。</p>
+<p><img src="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology2.svg" alt="P2. 网络拓扑2.0"/></p>
+<p>淘宝爆款路由器很智能地为我划分了网段，客厅路由器位于<code>192.168.1.0/24</code>，主卧路由器位于<code>192.168.2.0/24</code>。</p>
+<p>其实这套更新过的组网方案多少已经有了些问题，例如主卧内部二级路由的出现，导致连在二级路由上的设备无法在客厅主路由下访问。好在当时我也没有这种互访的需求，只要网络覆盖面积大了，那就皆大欢喜。</p>
+<p>再往后我进了大学，次卧里的书桌上终于不用再堆满文具。在我报到之前，客厅的台式被移到了次卧里，好处是客厅变得宽敞了一些，坏处是隔了一堵墙的无线信号简直无法忍受。此外，我还新买了一台Surface，微软的无线网卡使用体验的确远高于淘宝爆款：同样隔墙，Surface可以正常上网，台式机却经常掉线。</p>
+<p><img src="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology2.1.svg" alt="P3. 网络拓扑2.1"/></p>
+<p>原谅我在图里用了防火墙的图标，但是这堵墙对Wi-Fi的阻隔效果和防火墙实在没差！</p>
+<h2 id="大跃进">大跃进</h2>
+<p>大二暑假去NUS游学了大半个月，肉身翻墙感受到的国外互联网确实让我赞叹。7月4号到的新加坡，从此我体验过的网络速度有了数量级上的飞跃。</p>
+<p><img src="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/speedtest_in_sg.jpg" alt="P4. 国外网速" width="50%"/></p>
+<p>本来还在可惜回国以后就享受不到又快又好的网络了，没想到回国的第二天移动给我打了个电话，说是家里的网络可以以非常便宜的价格升级到200M。有这种机会当然是不能错过的，移动的工程师第三天就到了我们家里来（感谢提速降费！）。</p>
+<p>经过一番升级，入户宽带提升到了<strong>200M</strong>、有线猫换成了<strong>光猫</strong>、客厅路由器换成了<strong>华为WS5200增强版</strong>。客厅的老路由器运行不太稳定，直接被我扔了。</p>
+<p><img src="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology3.svg" alt="P5. 网络拓扑3.0"/></p>
+<p>新的路由器同时支持2.4GHz频段和5GHz频段。在可以直视路由器的地方，200M的网速妥妥的；只要一隔着墙，由于无线网卡老化和穿墙两重因素的影响，实际体验感人。2.4GHz的信号可以稳定穿墙，但是速率大打折扣，200M变成20M；5GHz的信号过了堵墙就变得虚无缥缈了，实际体验比2.4GHz下更糟糕。</p>
+<p>暑假在家时间很短，还没有来得及处理这个问题就返校了。</p>
+<h2 id="参数起底">参数起底</h2>
+<p>大二下学期学完了计网，加上寒假回家后由于新冠疫情的问题只能在家里呆着，糟糕的网络情况让人烦躁，所以直到最近我才真正着手升级家里的局域网。</p>
+<p>我的首要升级目标是在全家范围内实现千兆互联。在这之前，我需要对家里的所有网络设备有一个细致的了解。</p>
+<h3 id="爆款无线路由器">爆款无线路由器</h3>
+<p>我最先关注到的是爆款无线路由器，这个设备很早以前就存在了，十分可疑。路由器的型号是<code>TL-WR886N</code>，说实话名字不怎么吉利。打开TP-LINK的<a href="https://www.tp-link.com.cn/product_397.html#productSpe" target="_blank" rel="noopener">产品介绍页</a>，我们可以看到这款路由器支持的无线协议是<code>802.11b/g/n</code>，也就是非常标准的<code>Wi-Fi 4</code>；支持的有线协议是<code>802.3u</code>，也就是<code>100Mbps</code>以太网。查看维基百科的<a href="https://zh.wikipedia.org/wiki/IEEE_802.11#%E5%90%84%E5%9B%BD%E9%80%82%E7%94%A8%E9%A2%91%E9%81%93" target="_blank" rel="noopener">IEEE 802.11条目</a>，发现<code>802.11n</code>下一条流的最大速率是<code>150Mbps</code>，原来标称的450M网速是通过三根天线进行<code>3*3 MIMO</code>达到的。</p>
+<p>这路由器简直可以进入迷惑行为大赏！有线连接最高速率只有<code>100Mbps</code>，但是无线连接的速率却到了<code>450Mbps</code>，也不知道我的无线设备们怎么才能用完这四倍于有线的无线速率，难道天天在手机之间互相拷贝文件吗。当然，前面的吐槽是建立在设备能达到标称速率的基础上的，实际上我不管用什么设备去连接这个路由器，最高都只能达到<code>72Mbps</code>，也就是<code>20MHz</code>的频带下<code>1*1 MIMO</code>的速度。</p>
+<p>由于有线连接上的速率限制，加上不支持<code>Wi-Fi 5</code>，这款老设备肯定是无法满足千兆网络的要求的，所以我也只能对<code>TL-WR886N</code>说一声886。</p>
+<h3 id="移动无线路由光猫">移动无线路由光猫</h3>
+<p>移动送的光猫虽然是新设备，但是行为也十分可疑。猫的型号是<code>ZXHN F663NV3a</code>，是中兴为中国移动提供的定制型号，在转换光信号之外还支持了无线路由器的功能。看起来买一送一是赚爆，但真相总是男默女泪。</p>
+<p>首先登陆进这个光猫，不得不说在0202年看到下面这种登陆界面，视觉冲击力满分。</p>
+<p><img src="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/ZXHN.png" alt="P6. 光猫登陆界面" width="50%"/></p>
+<p>默认的用户名和密码在光猫底部，进去以后兜兜转转看了半天，实在不知道光猫里除了<code>Wi-Fi SSID</code>还有什么东西能让我设置。当然，这台光猫的迷惑行为远不止这一处。</p>
+<p>由于光猫包含了路由器的功能，所以背部就像普通路由器那样，是有四个LAN口的。千兆光猫的LAN口总应该是全千兆了吧，事实证明我naive了，因为四个LAN口只有一个是千兆的，剩下三个都是百兆的。</p>
+<p>光猫自带的Wi-Fi功能倒是不比前面的爆款路由器差多少，支持<code>Wi-Fi 4</code>标准、最高<code>2*2 MIMO</code>，偶尔能有<code>150M</code>的连接速度。</p>
+<p>我寻思这光猫节约成本的方式也是让人叹为观止。但是回过头来想，这种配置好像<del>大部分家庭的需求都是无法满足的，那又何苦在里面花钱内置路由器呢，实在疑惑。</del> 我错了，大部分家庭不会在意这些东西。</p>
+<h3 id="华为ws5200增强版">华为WS5200增强版</h3>
+<p>滑稽为这款路由器是移动的宽带工程师推销给我的，当时急着想体验<code>200M</code>的网络就买了，价格合理实际体验也让人满意。</p>
+<p>路由器背板上的网线接口是全千兆的；而无线方面，路由器一共配备了四根天线，<code>2.4GHz</code>和<code>5GHz</code>各两根，所以总的无线速率是<code>2*150Mbps+2*433Mbps=1167Mbps</code>（尽管我觉得这种标识有夸大之嫌，但没办法大家都这么标），我的手机和电脑在<code>5GHz</code>的<code>Wi-Fi 5</code>下也都能享受到<code>2*433Mbps=866Mbps</code>的速率。</p>
+<h2 id="升级">升级</h2>
+<p>升级的思路是优先满足<strong>千兆速率</strong>和<strong>全家覆盖</strong>两个要求，允许的情况下我还希望能实现<strong>设备互访</strong>和<strong>无线漫游</strong>。</p>
+<p>一番规划后，我决定使用一台<strong>新路由器</strong>和一台<strong>千兆交换机</strong>实现速率和覆盖的要求。</p>
+<p>前面弃用老路由器的决定导致家里网络覆盖面积少了一半，所以我首先需要购置一台新的路由器来满足网络的全家覆盖（什么，你说AP？那也太贵了！）。洋垃圾路由器是我中意很久的一个选择，在学校里就有人买了一台网件洋垃圾，强大的功能给我留下了深刻的印象。最终我选择了<code>Cisco EA6700</code>这一型号，国际大厂、老板代刷梅林固件、只要250多，是真的赚。</p>
+<p>同时为了解决隔墙Wi-Fi衰减的问题，我直接把华为路由器搬到了次卧，通过墙内走线连上光猫唯一的千兆口，一次性解决次卧内的网络连接问题（再次辱骂施工队留下的混乱信息箱）。至于客厅的无线网，就暂时用光猫上的Wi-Fi了。</p>
+<p>由于光猫上唯一的千兆口被占用，要让新购买的路由器也能享受千兆速率只能再增加一个千兆交换机。狗东上搜索出来一个H3C的桌面五口全千兆交换机，正好打折百元入手。</p>
+<p>硬件升级完后，家里的网络拓扑变成了这个样子。</p>
+<p><img src="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology4.svg" alt="P7. 网络拓扑4.0"/></p>
+<p>拿<code>ipref3</code>测试了一下网速，有线速度全部在<code>950Mbps</code>左右，主卧和次卧的无线连接速度在<code>250~350Mbps</code>，都属于正常范围（为什么有线都不能到1Gbps？当然是因为<a href="https://blog.qh2333.com/2020/03/11/network-myth/#%E5%A7%8B%E7%BB%88%E8%BE%BE%E4%B8%8D%E5%88%B0%E6%A0%87%E7%A7%B0%E9%80%9F%E7%8E%87%E7%9A%84%E7%BD%91%E7%BB%9C">overhead</a>啦！）。</p>
+<p>至于设备互访，我们通常有两种方案。高级的方法当然是在路由器上设置静态路由，这样可以让子网间互不干扰。可事实上三个路由器中只有<code>Cisco EA6700</code>可以让我这么设置，所以这个方法行不通。</p>
+<p>第二种方法是把路由器设置为<strong>桥接模式</strong>（相当于弃用路由功能，把路由器变成<strong>交换机和AP</strong>的组合体），正巧<code>Cisco EA6700</code>和<code>华为WS5200</code>都有快捷的桥接模式开关，一键设置完成。这样设置后，家里相当于只剩下了三个交换机，整个网络合并成了一个子网，自然任意两个设备都能互访。</p>
+<p><img src="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology4.1.svg" alt="P8. 网络拓扑4.1"/></p>
+<p>另外这还带来一个好处：由于两个二级路由的<code>DHCP服务器</code>都被关闭，所以所有设备的IP地址都由光猫分配（只有你不能设置关闭DHCP好吗！要能关我肯定让洋垃圾路由器负责DHCP！）。同一个设备拿着同一个MAC地址在全家任意地方接入，都会分配到固定的IP地址。</p>
+<p>关于设备漫游，这套硬件的确是实现不了。虽然看起来整个网络中有唯一的<code>DHCP服务器</code>，并且可以通过把所有AP的SSID和密码设置为相同的值来实现手机的自动选网，但这种方案会因为各种原因导致体验糟糕。目前实用的方案有<code>AC+AP</code>和<code>Mesh</code>两种，这两种都是土豪方案并不适合我，这里就不介绍了。</p>
+<h2 id="后记">后记</h2>
+<p>花了一周时间和350块把家里的网络从百兆一部升级到了千兆。尽管这套方案还有一些小问题，但是这也让我十分舒适了。</p>
+<p>下面的话，我可能会在交换机和光猫之间加再一级路由器，用来接管整个网络的IP分配，毕竟现在的光猫DHCP完全不受我控制。这级新的路由器上还能部署代理和离线下载等服务，扩展整个局域网的服务提供能力。</p>
+<hr />
+<p><strong>2020/03/11</strong></p>
+<ul>
+<li>做了一些微小的修改工作</li>
+</ul>
+<p><strong>2020/02/14</strong></p>
+<ul>
+<li>发布这篇文章</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag"># 网络</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/02/22/doc-and-tutorials/" rel="next" title="文档和教程">
+      文档和教程 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#开始的时候"><span class="nav-number">1.</span> <span class="nav-text">开始的时候</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事情变得复杂起来"><span class="nav-number">2.</span> <span class="nav-text">事情变得复杂起来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#大跃进"><span class="nav-number">3.</span> <span class="nav-text">大跃进</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参数起底"><span class="nav-number">4.</span> <span class="nav-text">参数起底</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#爆款无线路由器"><span class="nav-number">4.1.</span> <span class="nav-text">爆款无线路由器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动无线路由光猫"><span class="nav-number">4.2.</span> <span class="nav-text">移动无线路由光猫</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#华为ws5200增强版"><span class="nav-number">4.3.</span> <span class="nav-text">华为WS5200增强版</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#升级"><span class="nav-number">5.</span> <span class="nav-text">升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后记"><span class="nav-number">6.</span> <span class="nav-text">后记</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">QH2333</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/QH2333" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;QH2333" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:qi_an_hao@126.com" title="E-Mail → mailto:qi_an_hao@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">苏ICP备20005338号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">QH2333</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.1
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

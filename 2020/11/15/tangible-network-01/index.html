@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.qh2333.com","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="百闻不如一见">
+<meta property="og:type" content="article">
+<meta property="og:title" content="具象网络科普(1) - 局域网">
+<meta property="og:url" content="https://blog.qh2333.com/2020/11/15/tangible-network-01/">
+<meta property="og:site_name" content="QH2333&#39;s blog">
+<meta property="og:description" content="百闻不如一见">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://file.qh2333.com/blog_cache/tangible-network-01/Rj45plug-8p8c.png">
+<meta property="og:image" content="https://file.qh2333.com/blog_cache/tangible-network-01/Ethernet_Connection.jpg">
+<meta property="og:image" content="https://file.qh2333.com/blog_cache/tangible-network-01/topology1.svg">
+<meta property="og:image" content="https://file.qh2333.com/blog_cache/tangible-network-01/topology2.svg">
+<meta property="og:image" content="https://file.qh2333.com/blog_cache/tangible-network-01/topology2-1.svg">
+<meta property="og:image" content="https://file.qh2333.com/blog_cache/tangible-network-01/4_port_netgear_ethernet_hub.jpg">
+<meta property="article:published_time" content="2020-11-15T11:13:42.000Z">
+<meta property="article:modified_time" content="2020-11-18T15:51:41.704Z">
+<meta property="article:author" content="QH2333">
+<meta property="article:tag" content="网络">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://file.qh2333.com/blog_cache/tangible-network-01/Rj45plug-8p8c.png">
+
+<link rel="canonical" href="https://blog.qh2333.com/2020/11/15/tangible-network-01/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>具象网络科普(1) - 局域网 | QH2333's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="QH2333's blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">QH2333's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.qh2333.com/2020/11/15/tangible-network-01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="QH2333">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="QH2333's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          具象网络科普(1) - 局域网
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-11-15 19:13:42" itemprop="dateCreated datePublished" datetime="2020-11-15T19:13:42+08:00">2020-11-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-18 23:51:41" itemprop="dateModified" datetime="2020-11-18T23:51:41+08:00">2020-11-18</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote>
+<p>百闻不如一见</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="前言">前言</h2>
+<p>19世纪60年代，在美国几所大学里，有人使用通信线缆连接起了一系列的计算机，然后编写了收发数据的程序，使得这些计算机之间可以互相交换信息，由此诞生了最早的一批“网络”。经过接近60年的发展，如今网络已经遍布世界，成为现代社会的“信息基础设施”。但是同时，网络的结构也变得极度复杂：现在即使拿出一张中小型网络的结构图来，人们也会发现它的内部充满了“调制解调器、网桥、交换机、AP、路由器、网关”等各式设备，不像它最初诞生时的那样简洁。</p>
+<p>这种“复杂性”使得实际网络中发生的一切离普通人原来越远。一个普通人可能在家里接触过“家用无线路由器”，但却没有机会去了解它为了实现“让家里上网”，究竟完成了什么工作。一个计算机专业的学生可能在计算机网络课中学习了协议、分层结构、路由等知识，但也很难在现实中接触的设备中找到对应（当然这主要是因为遇到了不太优秀的老师），从而觉得具象化的计算机网络是一门抽象的学科。好在这些“复杂”和“抽象”都只是一种错觉：一方面，当今的网络本质上和它刚诞生的时候没有太多区别；另一方面，再复杂的功能都是通过实实在在、看得见摸得着的网络设备来完成的。这一系列博文中，我希望架起<strong>抽象网络知识</strong>和<strong>具象物理世界</strong>桥梁，科普一些有趣的知识，但也不希望写一份网络讲义。</p>
+<h2 id="什么是网络">什么是网络</h2>
+<p>在解决问题前，我们最好先弄清楚要解决的是什么问题。所以在介绍网络前，我们最好先了解一下网络的作用是什么，换句话说：<em>为什么要有网络？</em>大部分教材中都会提到<strong>数据通信</strong>和<strong>资源共享</strong>两种作用，我认为这是比较精当的，不管是发信息、发邮件、网上冲浪，还是玩网络游戏、看视频、下载文件，都离不开这两者的范畴。</p>
+<p>网络让人们互相通信、共享资源，而在计算机的世界中，信息、资源都是以数据形式存在的，于是我们也可以说，网络为连接到其上的设备提供提供<strong>数据交换</strong>的服务。</p>
+<p>结构上，我愿意把网络看作一个<strong>计算机系统</strong>。我们仍可以像60年前那样，认为网络里包括的只是一些<strong>计算机</strong>和连接这些计算机的<strong>通信线路</strong>，这么说虽然不一定完全准确，但也已经足够了。没错，大部分网络设备做的事情和计算机没有区别：路由器无非是收到数据后决定接下来把它转发到哪里去，或是对数据的内容做一些检查，确保安全性。还有一小部分网络设备则充当通信线路的职责：整理信号让它可以发的更远，或是转换信号的格式。我们考虑这类设备的时候可以直接用电线来代替它们。</p>
+<p>网络里的计算机希望互相交换数据，这肯定不能在无序的情况下实现。就像道路交通一样，网络中的计算机需要遵守一定的规则，才能保证效率和安全：按什么格式发送数据、收到别人的数据后做什么、收到错误的数据后怎么办、如何保证数据不被人偷看？这些规则通常被人们记录在文档里，称为<strong>协议</strong>，实际中人们需要编写相应的<strong>程序</strong>来实现这些协议。</p>
+<p>总结一下，<strong>网络就是一个由计算机、通信线路、协议、实现协议的程序组成的计算机系统</strong>，这个系统往小里说可以是家里的<strong>局域网</strong>，往大里说可以是覆盖全球的<strong>广域网</strong>（例如Internet）。</p>
+<p>在这个系列的最开始，我将从大家最熟悉的以太网开始介绍。即使没有听说过这个名字，你大概也会每天都接触到它。</p>
+<h2 id="抽象通信线路和计算机">抽象：通信线路和计算机</h2>
+<p>正式开始之前，还需要介绍几个概念，好确保大家对一些基础知识有一定印象。首先需要明确的是：<em>通信线路到底是什么？</em></p>
+<p>由于是科普性质，我会把讨论的东西限制在“常见”的范围内，所以就认为通信线路一般是<strong>双绞线</strong>或是<strong>光纤</strong>好了。</p>
+<h3 id="双绞线">双绞线</h3>
+<p>双绞线就是人们口中的网线，大多数人应该都见过，接口处是方形的透明塑料做的，还有一个小卡口。</p>
+<p><img src="https://file.qh2333.com/blog_cache/tangible-network-01/Rj45plug-8p8c.png" alt="Figure 1. 网线接口" width="60%"/></p>
+<p>网线通过机械方式插在电脑上的网口里。网口是一个带凸起的方形插槽，运行时通常还会有闪烁的指示灯。</p>
+<p><img src="https://file.qh2333.com/blog_cache/tangible-network-01/Ethernet_Connection.jpg" alt="Figure 2. 运行中的网口" width="60%"/></p>
+<p>双绞线本质上只是把8根细小的铜电线包在一根线的内部，这8根线两两一组分为四组，每组的两根线互相缠绕在一起，所以得名“双绞线”（我们不需要知道这么做的目的）。从电线的角度看：如果一个人改变了一组电线上的电压，那另一个人就可以在电线的另一头检测到这一变化，于是电压的变化就可以用来传递信息。信息传递的最小单位是bit，一旦我们确定一bit信息持续的时间，就可以通过不断改变、检测电压来实现信息的收发。把电线组装成网线，把网线接在两台计算机之间，规定四组电线的收发分工，让计算机来自动改变、检测网线上的电压，这就是网线在计算机之间传输数据的基本模式。</p>
+<p>为了简化思维负担，我们可以去掉“电线、电压”这些物理意义，<strong>暂时</strong>只把网线抽象成一个双向的管道：当网线连接在两台计算机之间时，任意一方向管道中注入数据（改变电压），另一方都会从管道中接收到这些数据（检测电压改变）。</p>
+<h3 id="光纤">光纤</h3>
+<p>光纤通常是黄色的细小线路（相对于双绞线而言），对我们而言，只需要知道光纤发送数据的能力远远高于双绞线就可以了。</p>
+<h2 id="尝试在两台计算机间收发数据">尝试在两台计算机间收发数据</h2>
+<p>拥有一根可以双向收发数据的网线后，我们就可以基于它构建网络了。想象一个最基础的网络：两台计算机外加一根网线，网线的两端分别接在两台计算机的网口上。</p>
+<p><img src="https://file.qh2333.com/blog_cache/tangible-network-01/topology1.svg" alt="Figure 3. 简单拓扑"/></p>
+<p>那么如何在两台计算机之间交换信息呢，比如说Alice想要给Bob发送一个文件？很显然，Alice不会时时刻刻向Bob发送文件，所以她必须让Bob知道这个文件什么时候开始发送，以及文件的长度有多长。在我们的网络中，可以规定一个特殊的比特序列，称为<strong>同步码</strong>，并且让Bob一直在网线上监听，一旦发现Alice发送了同步码，Bob就知道后面的内容是Alice发来的文件信息。至于文件长度的确定，我们也可以沿用类似的方法：规定另一个特殊的比特序列，称为<strong>结束码</strong>，一旦Bob发现接收的数据中出现了这串比特序列，就知道文件已经发送完毕。</p>
+<p>如果遇到很长的文件，我们怎么处理呢？首先是不做特殊处理的方法：将<strong>整个</strong>文件从头到尾发送到网线上，就好像传输水流一样；另外我们也可以将文件分块，然后从前到后把分块<strong>逐块</strong>发送到网线上，就好像传送快递包裹一样。看起来第一种方法比较直接，而第二种方法稍显麻烦，但网络中实际采用的确是第二种方法。之所以这么做，很大的一个原因是前一种方法灵活性太差：如果Alice同时需要给Bob发送两个文件，第一种方式下只能发完一个再发另一个。极端的情况下，一个大文件后紧跟着一个小文件，那小文件即使可以在0.1s内传输完成，它也必须先等大文件传输结束。如果用后一种方法，Alice可以选择轮流发送两个文件的一小块内容，给人一种两个文件同时在发送的错觉，这称为<strong>并发(Concurrency)</strong>。</p>
+<p>用术语来说，文件的每个小块称为<strong>分组</strong>或<strong>包(Package)</strong>，而这种传输方式称为<strong>分组传输</strong>。世界上的几乎所有网络流量都是通过分组方式传输的。</p>
+<p>举例来说，现在Alice需要给Bob发送一个2000Byte的文件，我们事先规定一个分组最多只能长1500Byte，并且Bob知道文件一共有2000Byte。Alice决定把这个文件分成2份（第一份1500Byte长，第二份500Byte长），然后再把每一份文件内容分别打包成分组（也就是在实际内容前面附加同步码、在实际内容后附加结束码），发送到网线上。另一端的Bob首先接收到同步码，然后开始接收文件的实际内容，直到收到结束码。当Bob完整地收到两个分组后，他也就知道文件已经接收完成。</p>
+<h2 id="如果需要连接更多计算机呢">如果需要连接更多计算机呢</h2>
+<p>我们已经可以在两台计算机之间传送信息了，但如果出现了第三台计算机呢？下面是两种简单的拓展。</p>
+<p><img src="https://file.qh2333.com/blog_cache/tangible-network-01/topology2.svg" alt="Figure 4. 尝试扩展网络"/></p>
+<p>左边的图中Charlie连接到Alice的计算机上，Alice再连接到Bob，但这么一来Alice的任务就会变得繁重：她除了自己需要的信息外，还必须帮Charlie和Bob转发他俩之间的信息。右边图中每两个人之间都相互连接，但这样带来的后果是每个人的计算机都必须有两个网络接口。</p>
+<h3 id="广播和以太网">广播和以太网</h3>
+<p>正确的做法是让Charlie直接连接到Alice和Bob之间的网线上。</p>
+<p><img src="https://file.qh2333.com/blog_cache/tangible-network-01/topology2-1.svg" alt="Figure 5. 广播网络"/></p>
+<p>为什么能这么做呢？别忘了网线的本质是电线，电压改变后在电线的任何一处都可以测量到变化，也就是说接在同一根网线上的每一台计算机，发送的信息都可以让其他所有计算机接收到！这种信息发送方式称为<strong>广播(Broadcast)</strong>。现在我们有必要更新一下之前网线是“双向管道”的认知，就像空气是传播声音的媒介一样，网线似乎可以看作是传播信息的媒介，这种网络的发明者认为假想的光传播媒介“以太”很符合网络的特点，所以把这种网络命名为<strong>以太网(Ethernet)</strong>。</p>
+<h3 id="mac地址">MAC地址</h3>
+<p>广播的引入带来了新的问题。当线路上只有Alice和Bob两个人时，不管是谁发送的信息，都只能由另一个人接收，不存在任何歧义。但加入Charlie后，Alice发送的数据Bob和Charlie都可以收到，怎么确定这数据到底该由谁来接收呢？答案的灵感可以从邮件中找到，寄件时我们会在信封上填写发件地址和收件地址，只有拥有收件地址的那个人才可以收件并把邮件打开。发件地址和收件地址可以认为是收发双方的一种“标识符”，同样的我们也可以为网络中的设备分配不同的标识符，这称为设备的<strong>物理地址</strong>或<strong>MAC地址</strong>。</p>
+<p>MAC地址是一个长48位的二进制数，通常我们用下面这种十六进制格式来书写MAC地址：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">12:34:56:78:9A:BC</span><br></pre></td></tr></table></figure>
+<p>实际上，MAC地址标记的是<strong>网络接口</strong>（包括但不限于插网线的那个网口），如果一台计算机有两个网口，那就会有两个MAC地址。通过某种合理的分配方式，我们可以认为任意两个网口的MAC地址相同的概率为0。网口必定是属于网络中某个计算机的，间接地来说我们就用MAC标记了网络中的计算机。</p>
+<h3 id="封装">封装</h3>
+<p>既然有了标记网络中计算机的手段，我们下一步就需要把收发双方的MAC地址添加到分组中。</p>
+<p>假设以太网中一个分组最多可以携带1500Byte的信息，在没有MAC地址时，这1500Byte全都可以用于传递用户的信息（比如文件的某一片段），现在有了MAC地址，我们必须<strong>至少</strong>分出12Byte来表示收发双方的MAC地址（48/8*2 = 12），所以<strong>最多</strong>只剩1488Byte可以用来传递用户的信息。</p>
+<p>分配好空间使用后，我们还需要确定把这12Byte地址信息放在哪里。约定俗成地，这部分内容会出现在整个分组的最前端。实际的以太网中，除了12Byte地址信息外还有4Byte的其他信息（<code>Type</code>），紧挨着地址信息出现。这样，一个以太网报文的大致格式就是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+------------------------+-------------------+-------------+-----------+</span><br><span class="line">| 6 Byte Destination MAC | 6 Byte Source MAC | 4 Byte Type | User Data |</span><br><span class="line">+------------------------+-------------------+-------------+-----------+</span><br></pre></td></tr></table></figure>
+<p>以太网规定了以何种格式发送数据（还有许多其他内容，比如MAC地址），正如最初所说的，我们说以太网是一种<strong>协议</strong>。上面所说的这种“<strong>在用户数据(User data)前，添加协议有关的数据</strong>”的行为，称为<strong>封装(Encapsulation)</strong>，协议有关的数据通常称为<strong>报头(Header)</strong>。“封装”一名的由来非常形象：以太网报头就像是一个容器，把用户数据打包装在其内部。</p>
+<p>经过封装后，数据就又可以在以太网中放心地传输了。网络中的每台计算机接收到广播来的分组后，查看分组中填写的<strong>目的MAC地址(Destination MAC)</strong>，如果与自身的MAC相符，就收下这个分组；否则不再做任何其他处理（相当于丢弃）。</p>
+<h3 id="hub">Hub</h3>
+<p>在行为层面上，我们的以太网已经可以愉快地运行，但是还存在一个实现上的小问题：市面上并没有三个接头的网线，所以Clarlie要怎么把他的网线接在Alice与Bob之间已经存在的网线上呢？</p>
+<p>解决这一问题的是一种很简单的网络设备：以太网Hub</p>
+<p><img src="https://file.qh2333.com/blog_cache/tangible-network-01/4_port_netgear_ethernet_hub.jpg" alt="Figure 6. 以太网Hub"/></p>
+<p>如果你认识交换机的话，可能会觉得Hub和交换机外观很相似。就功能上而言，二者确实很相似，他们都把多台计算机接入同一个以太网中。但细究起来，Hub是一种比交换机古老得多的设备（以至于现在几乎已经不再使用了），它的内部结构极其简单：只是<strong>把每个双绞线插口中的8根线，分别连接到一起</strong>。这是一种纯物理层面的设备，使用最直接的方式连接了以太网。</p>
+<p>到此为止，就是以太网最基础的运行原理。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag"># 网络</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/12/aweful-c/" rel="prev" title="Aweful C/C++">
+      <i class="fa fa-chevron-left"></i> Aweful C/C++
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是网络"><span class="nav-number">2.</span> <span class="nav-text">什么是网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象通信线路和计算机"><span class="nav-number">3.</span> <span class="nav-text">抽象：通信线路和计算机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#双绞线"><span class="nav-number">3.1.</span> <span class="nav-text">双绞线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#光纤"><span class="nav-number">3.2.</span> <span class="nav-text">光纤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#尝试在两台计算机间收发数据"><span class="nav-number">4.</span> <span class="nav-text">尝试在两台计算机间收发数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如果需要连接更多计算机呢"><span class="nav-number">5.</span> <span class="nav-text">如果需要连接更多计算机呢</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#广播和以太网"><span class="nav-number">5.1.</span> <span class="nav-text">广播和以太网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mac地址"><span class="nav-number">5.2.</span> <span class="nav-text">MAC地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#封装"><span class="nav-number">5.3.</span> <span class="nav-text">封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hub"><span class="nav-number">5.4.</span> <span class="nav-text">Hub</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">QH2333</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/QH2333" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;QH2333" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:qi_an_hao@126.com" title="E-Mail → mailto:qi_an_hao@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">苏ICP备20005338号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">QH2333</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.1
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

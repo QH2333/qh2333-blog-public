@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.qh2333.com","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="叮！又有新作业了！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一个简单的作业跟踪工具">
+<meta property="og:url" content="https://blog.qh2333.com/2020/03/04/endless-homework/">
+<meta property="og:site_name" content="QH2333&#39;s blog">
+<meta property="og:description" content="叮！又有新作业了！">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-03-04T01:57:03.000Z">
+<meta property="article:modified_time" content="2020-07-18T04:46:37.761Z">
+<meta property="article:author" content="QH2333">
+<meta property="article:tag" content="网站">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://blog.qh2333.com/2020/03/04/endless-homework/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>一个简单的作业跟踪工具 | QH2333's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="QH2333's blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">QH2333's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.qh2333.com/2020/03/04/endless-homework/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="QH2333">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="QH2333's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          一个简单的作业跟踪工具
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-03-04 09:57:03" itemprop="dateCreated datePublished" datetime="2020-03-04T09:57:03+08:00">2020-03-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-18 12:46:37" itemprop="dateModified" datetime="2020-07-18T12:46:37+08:00">2020-07-18</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>叮！又有新作业了！</p>
+<a id="more"></a>
+<h2 id="背景">背景</h2>
+<p>出于种种原因，某些老师/助教布置作业时的要求总是让人费解，同学们经常为作业的提交时间而争吵，甚至产生恐慌。今年在嘉里敦大学上课，一门课一个作业提交平台更是激化了这个问题带来的矛盾。</p>
+<p>我认为，所有让同学理解作业时产生overhead的老师/助教，都该骂。</p>
+<p>可惜能力有限，无法改变现状（如果怼的话，相信老师会让我考虑自己的前途的），只能做一个整合平台，尽力用最直观的方式让人了解作业的布置情况。</p>
+<h2 id="这个工具可以干什么">这个工具可以干什么</h2>
+<p>可以按照课程对作业进行分类，按提交时间对作业进行排序。每项作业都有明确的提交方式和提交时间，不同阶段的作业（普通作业、即将提交的作业、提交截止的作业）按照颜色进行区分。</p>
+<h2 id="怎么实现的">怎么实现的</h2>
+<p>做一个Web应用自然是最好的，这样一来部署上服务器以后大家就都可以方便地使用。各部分的技术选型，我是这么考虑的：</p>
+<ul>
+<li>技术上本着最简(tou)化(lan)的原则，我选择了基于Python的Flask框架，毕竟这个框架不需要多少行代码就能跑起来。</li>
+<li>工具虽小，但也是个完整的Web应用，关于作业的各项信息就是业务信息了，肯定需要放在数据库中，我的服务器上之前就安装了MySQL，于是干脆就地取材。</li>
+<li>出于减轻服务器压力的考量（虽然本来就不会有什么压力），我决定不让服务器直接在后端渲染好页面，而是返回JSON数据，让浏览器里的JavaScript完成主要的HTML渲染工作。</li>
+<li>至于前端，手写样式想起来就让人头皮发麻，那就只好用Bootstrap这种样式库，套个模板我还是会的。</li>
+</ul>
+<p>当然，说白了这就是一个采用Flask后端、MySQL数据库，基于Ajax技术实现的Web应用。不过前面这句话里充满了吓人的术语，我还是不说的好。</p>
+<h3 id="数据库">数据库</h3>
+<p>因为这暂时还是一个非常简单的工具，我并没有考虑用户、权限、作业所属的班级这些乱七八糟的东西（其实只是偷懒）。整个数据库里只有<strong>作业信息</strong>一张表，自然也就不需要复杂的数据库设计。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`homework_info`</span> (</span><br><span class="line">  <span class="string">`rec_id`</span> <span class="built_in">int</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT,</span><br><span class="line">  <span class="string">`c_name`</span> <span class="built_in">varchar</span>(<span class="number">32</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`assigntime`</span> <span class="built_in">date</span> <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`detail`</span> <span class="built_in">varchar</span>(<span class="number">1024</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`deadline`</span> datetime <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`method`</span> <span class="built_in">varchar</span>(<span class="number">32</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`rec_id`</span>)</span><br><span class="line">) <span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span> AUTO_INCREMENT=<span class="number">9</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8mb4 <span class="keyword">COLLATE</span>=utf8mb4_0900_ai_ci</span><br></pre></td></tr></table></figure>
+<h3 id="flask应用框架">Flask应用框架</h3>
+<p>Flask的使用非常简单，我们只需要导入<code>flask</code>模块</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> flask</span><br></pre></td></tr></table></figure>
+<p>然后像官方示例那样，创建一个Flask应用对象</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">application = flask.Flask(__name__)</span><br></pre></td></tr></table></figure>
+<p>再创建一些页面路由，随便返回些什么</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@application.route("/")</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"Someting"</span></span><br></pre></td></tr></table></figure>
+<p>最后自己写个main，让Flask应用运行起来就好</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    application.run(host=<span class="string">'0.0.0.0'</span>, port=<span class="number">7777</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="flask路由">Flask路由</h3>
+<p>看得出来，上面的框架里只有页面路由的部分是我们需要修改的。如果只需要实现一个作业信息展示的功能，那一共需要配置两条路由，一条用来返回页面的HTML框架，另一条用来返回页面里的数据。</p>
+<p>关于返回HTML框架的这条路由，我们可以预先写好一份HTML文件，让Flask在需要的时候直接调取返回：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@application.route("/")</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> flask.render_template(<span class="string">'index.html'</span>)</span><br></pre></td></tr></table></figure>
+<p>返回数据的这条路由实际上定义了一个Web API，地址是<code>/data</code>。当有人访问这个API时，我们需要去读取数据库中所有作业的信息，然后把读到的内容打包成一个JSON字符串，再返回。读数据库的代码网上有很多，我这里就直接写成一个函数调用了，看起来清晰不少。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@application.route("/data")</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">data</span><span class="params">()</span>:</span></span><br><span class="line">    rst = flask.make_response(get_json())</span><br><span class="line">    <span class="keyword">return</span> rst</span><br></pre></td></tr></table></figure>
+<h3 id="前端html">前端HTML</h3>
+<p>前端的HTML代码只需要负责框架的搭建，所以除去引入JS、CSS的标记外，整个页面写这么几句就好。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"text-center"</span>&gt;</span>SWJTU CS_2017 Homework<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"data"</span> <span class="attr">class</span>=<span class="string">"container-sm"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="前端javascript">前端JavaScript</h3>
+<p>前端最主要的部分在JavaScript代码中。整个代码的思路其实非常简单：在HTML和CSS加载完成后，通过后端提供的<code>/data</code>这一Web API，拿到关于作业的所有数据，然后把这些数据解析成前端的HTML元素，插入页面之中。</p>
+<p>向页面中插入HTML元素的方法有很多种，但它们的本质基本都相同。浏览器将一个HTML页面称为一个文档，然后文档被表示成元素节点的树状结构，称为<strong>文档树</strong>，通过一套名为<strong>DOM</strong>的API访问。插入元素，最朴素的做法就是找到文档树中的一个目标元素节点（通常是新插入元素节点的父节点），然后让新的元素节点成为其子节点，我在这里使用的就是这种方法。不幸的是，这种方法虽然看起来既标准又正统，但离完美差的很远。JS大牛Douglas Crockford在<em>《JavaScript语言精粹》</em>一书中认为</p>
+<blockquote>
+<p>DOM规范制定得很拙劣并且实现互不一致。</p>
+</blockquote>
+<p>事实也确实是这样。查找目标元素节点的操作需要遍历文档树，这在大型页面里是一项很耗费时间的操作。找到目标元素节点后，为了创建并在其中插入子节点，JavaScript代码中会<strong>大量、反复</strong>地出现<code>createElement()</code>、<code>setAttribute()</code>、<code>appendChild()</code>这些函数。而这些函数的调用又是很不层次化的，离清晰明了的HTML语言相距甚远。</p>
+<p>更好的一种方法就显得很暴力，我们可以提前为待插入的内容编写好一份HTML<strong>模板</strong>代码，将其保存成字符串。需要插入时，只需要把目标元素节点的<code>innerHTML</code>属性置为模板字符串，浏览器就会自动完成解析操作。不管对人还是对电脑，这种方法效率都高了很多。后续我也许会尝试这种方法。</p>
+<h2 id="最后">最后</h2>
+<p>这篇Blog的正文是2020.7完成的，但其实这个工具在四个月前就写好了，只不过一直咕咕咕。（逃</p>
+<p>你可以在我的Github上找到这个工具的<a href="https://github.com/QH2333/homework_tracker" target="_blank" rel="noopener">源代码</a>，欢迎尝试。</p>
+<hr />
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%BD%91%E7%AB%99/" rel="tag"># 网站</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/02/22/doc-and-tutorials/" rel="prev" title="文档和教程">
+      <i class="fa fa-chevron-left"></i> 文档和教程
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/03/11/network-myth/" rel="next" title="网络迷思">
+      网络迷思 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#这个工具可以干什么"><span class="nav-number">2.</span> <span class="nav-text">这个工具可以干什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怎么实现的"><span class="nav-number">3.</span> <span class="nav-text">怎么实现的</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库"><span class="nav-number">3.1.</span> <span class="nav-text">数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flask应用框架"><span class="nav-number">3.2.</span> <span class="nav-text">Flask应用框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flask路由"><span class="nav-number">3.3.</span> <span class="nav-text">Flask路由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端html"><span class="nav-number">3.4.</span> <span class="nav-text">前端HTML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端javascript"><span class="nav-number">3.5.</span> <span class="nav-text">前端JavaScript</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后"><span class="nav-number">4.</span> <span class="nav-text">最后</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">QH2333</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/QH2333" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;QH2333" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:qi_an_hao@126.com" title="E-Mail → mailto:qi_an_hao@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">苏ICP备20005338号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">QH2333</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.1
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
