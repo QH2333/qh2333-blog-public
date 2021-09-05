@@ -28,18 +28,18 @@
 <meta property="og:site_name" content="QH2333&#39;s blog">
 <meta property="og:description" content="百闻不如一见">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://file.qh2333.com/blog_cache/tangible-network-01/Rj45plug-8p8c.png">
-<meta property="og:image" content="https://file.qh2333.com/blog_cache/tangible-network-01/Ethernet_Connection.jpg">
-<meta property="og:image" content="https://file.qh2333.com/blog_cache/tangible-network-01/topology1.svg">
-<meta property="og:image" content="https://file.qh2333.com/blog_cache/tangible-network-01/topology2.svg">
-<meta property="og:image" content="https://file.qh2333.com/blog_cache/tangible-network-01/topology2-1.svg">
-<meta property="og:image" content="https://file.qh2333.com/blog_cache/tangible-network-01/4_port_netgear_ethernet_hub.jpg">
+<meta property="og:image" content="https://qh2333.github.io/qh2333-blog-public/2020/11/15/tangible-network-01/Rj45plug-8p8c.png">
+<meta property="og:image" content="https://qh2333.github.io/qh2333-blog-public/2020/11/15/tangible-network-01/Ethernet_Connection.jpg">
+<meta property="og:image" content="https://qh2333.github.io/qh2333-blog-public/2020/11/15/tangible-network-01/topology1.svg">
+<meta property="og:image" content="https://qh2333.github.io/qh2333-blog-public/2020/11/15/tangible-network-01/topology2.svg">
+<meta property="og:image" content="https://qh2333.github.io/qh2333-blog-public/2020/11/15/tangible-network-01/topology2-1.svg">
+<meta property="og:image" content="https://qh2333.github.io/qh2333-blog-public/2020/11/15/tangible-network-01/4_port_netgear_ethernet_hub.jpg">
 <meta property="article:published_time" content="2020-11-15T11:13:42.000Z">
-<meta property="article:modified_time" content="2020-11-18T15:51:41.704Z">
+<meta property="article:modified_time" content="2021-09-05T09:27:24.023Z">
 <meta property="article:author" content="QH2333">
 <meta property="article:tag" content="网络">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://file.qh2333.com/blog_cache/tangible-network-01/Rj45plug-8p8c.png">
+<meta name="twitter:image" content="https://qh2333.github.io/qh2333-blog-public/2020/11/15/tangible-network-01/Rj45plug-8p8c.png">
 
 <link rel="canonical" href="https://qh2333.github.io/qh2333-blog-public/2020/11/15/tangible-network-01/">
 
@@ -198,7 +198,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-18 23:51:41" itemprop="dateModified" datetime="2020-11-18T23:51:41+08:00">2020-11-18</time>
+                <time title="修改时间：2021-09-05 17:27:24" itemprop="dateModified" datetime="2021-09-05T17:27:24+08:00">2021-09-05</time>
               </span>
 
           
@@ -231,27 +231,27 @@
 <p>由于是科普性质，我会把讨论的东西限制在“常见”的范围内，所以就认为通信线路一般是<strong>双绞线</strong>或是<strong>光纤</strong>好了。</p>
 <h3 id="双绞线">双绞线</h3>
 <p>双绞线就是人们口中的网线，大多数人应该都见过，接口处是方形的透明塑料做的，还有一个小卡口。</p>
-<p><img src="https://file.qh2333.com/blog_cache/tangible-network-01/Rj45plug-8p8c.png" alt="Figure 1. 网线接口" width="60%"/></p>
+<p><img src="Rj45plug-8p8c.png" alt="Figure 1. 网线接口" width="60%"/></p>
 <p>网线通过机械方式插在电脑上的网口里。网口是一个带凸起的方形插槽，运行时通常还会有闪烁的指示灯。</p>
-<p><img src="https://file.qh2333.com/blog_cache/tangible-network-01/Ethernet_Connection.jpg" alt="Figure 2. 运行中的网口" width="60%"/></p>
+<p><img src="Ethernet_Connection.jpg" alt="Figure 2. 运行中的网口" width="60%"/></p>
 <p>双绞线本质上只是把8根细小的铜电线包在一根线的内部，这8根线两两一组分为四组，每组的两根线互相缠绕在一起，所以得名“双绞线”（我们不需要知道这么做的目的）。从电线的角度看：如果一个人改变了一组电线上的电压，那另一个人就可以在电线的另一头检测到这一变化，于是电压的变化就可以用来传递信息。信息传递的最小单位是bit，一旦我们确定一bit信息持续的时间，就可以通过不断改变、检测电压来实现信息的收发。把电线组装成网线，把网线接在两台计算机之间，规定四组电线的收发分工，让计算机来自动改变、检测网线上的电压，这就是网线在计算机之间传输数据的基本模式。</p>
 <p>为了简化思维负担，我们可以去掉“电线、电压”这些物理意义，<strong>暂时</strong>只把网线抽象成一个双向的管道：当网线连接在两台计算机之间时，任意一方向管道中注入数据（改变电压），另一方都会从管道中接收到这些数据（检测电压改变）。</p>
 <h3 id="光纤">光纤</h3>
 <p>光纤通常是黄色的细小线路（相对于双绞线而言），对我们而言，只需要知道光纤发送数据的能力远远高于双绞线就可以了。</p>
 <h2 id="尝试在两台计算机间收发数据">尝试在两台计算机间收发数据</h2>
 <p>拥有一根可以双向收发数据的网线后，我们就可以基于它构建网络了。想象一个最基础的网络：两台计算机外加一根网线，网线的两端分别接在两台计算机的网口上。</p>
-<p><img src="https://file.qh2333.com/blog_cache/tangible-network-01/topology1.svg" alt="Figure 3. 简单拓扑"/></p>
+<p><img src="topology1.svg" alt="Figure 3. 简单拓扑"/></p>
 <p>那么如何在两台计算机之间交换信息呢，比如说Alice想要给Bob发送一个文件？很显然，Alice不会时时刻刻向Bob发送文件，所以她必须让Bob知道这个文件什么时候开始发送，以及文件的长度有多长。在我们的网络中，可以规定一个特殊的比特序列，称为<strong>同步码</strong>，并且让Bob一直在网线上监听，一旦发现Alice发送了同步码，Bob就知道后面的内容是Alice发来的文件信息。至于文件长度的确定，我们也可以沿用类似的方法：规定另一个特殊的比特序列，称为<strong>结束码</strong>，一旦Bob发现接收的数据中出现了这串比特序列，就知道文件已经发送完毕。</p>
 <p>如果遇到很长的文件，我们怎么处理呢？首先是不做特殊处理的方法：将<strong>整个</strong>文件从头到尾发送到网线上，就好像传输水流一样；另外我们也可以将文件分块，然后从前到后把分块<strong>逐块</strong>发送到网线上，就好像传送快递包裹一样。看起来第一种方法比较直接，而第二种方法稍显麻烦，但网络中实际采用的确是第二种方法。之所以这么做，很大的一个原因是前一种方法灵活性太差：如果Alice同时需要给Bob发送两个文件，第一种方式下只能发完一个再发另一个。极端的情况下，一个大文件后紧跟着一个小文件，那小文件即使可以在0.1s内传输完成，它也必须先等大文件传输结束。如果用后一种方法，Alice可以选择轮流发送两个文件的一小块内容，给人一种两个文件同时在发送的错觉，这称为<strong>并发(Concurrency)</strong>。</p>
 <p>用术语来说，文件的每个小块称为<strong>分组</strong>或<strong>包(Package)</strong>，而这种传输方式称为<strong>分组传输</strong>。世界上的几乎所有网络流量都是通过分组方式传输的。</p>
 <p>举例来说，现在Alice需要给Bob发送一个2000Byte的文件，我们事先规定一个分组最多只能长1500Byte，并且Bob知道文件一共有2000Byte。Alice决定把这个文件分成2份（第一份1500Byte长，第二份500Byte长），然后再把每一份文件内容分别打包成分组（也就是在实际内容前面附加同步码、在实际内容后附加结束码），发送到网线上。另一端的Bob首先接收到同步码，然后开始接收文件的实际内容，直到收到结束码。当Bob完整地收到两个分组后，他也就知道文件已经接收完成。</p>
 <h2 id="如果需要连接更多计算机呢">如果需要连接更多计算机呢</h2>
 <p>我们已经可以在两台计算机之间传送信息了，但如果出现了第三台计算机呢？下面是两种简单的拓展。</p>
-<p><img src="https://file.qh2333.com/blog_cache/tangible-network-01/topology2.svg" alt="Figure 4. 尝试扩展网络"/></p>
+<p><img src="topology2.svg" alt="Figure 4. 尝试扩展网络"/></p>
 <p>左边的图中Charlie连接到Alice的计算机上，Alice再连接到Bob，但这么一来Alice的任务就会变得繁重：她除了自己需要的信息外，还必须帮Charlie和Bob转发他俩之间的信息。右边图中每两个人之间都相互连接，但这样带来的后果是每个人的计算机都必须有两个网络接口。</p>
 <h3 id="广播和以太网">广播和以太网</h3>
 <p>正确的做法是让Charlie直接连接到Alice和Bob之间的网线上。</p>
-<p><img src="https://file.qh2333.com/blog_cache/tangible-network-01/topology2-1.svg" alt="Figure 5. 广播网络"/></p>
+<p><img src="topology2-1.svg" alt="Figure 5. 广播网络"/></p>
 <p>为什么能这么做呢？别忘了网线的本质是电线，电压改变后在电线的任何一处都可以测量到变化，也就是说接在同一根网线上的每一台计算机，发送的信息都可以让其他所有计算机接收到！这种信息发送方式称为<strong>广播(Broadcast)</strong>。现在我们有必要更新一下之前网线是“双向管道”的认知，就像空气是传播声音的媒介一样，网线似乎可以看作是传播信息的媒介，这种网络的发明者认为假想的光传播媒介“以太”很符合网络的特点，所以把这种网络命名为<strong>以太网(Ethernet)</strong>。</p>
 <h3 id="mac地址">MAC地址</h3>
 <p>广播的引入带来了新的问题。当线路上只有Alice和Bob两个人时，不管是谁发送的信息，都只能由另一个人接收，不存在任何歧义。但加入Charlie后，Alice发送的数据Bob和Charlie都可以收到，怎么确定这数据到底该由谁来接收呢？答案的灵感可以从邮件中找到，寄件时我们会在信封上填写发件地址和收件地址，只有拥有收件地址的那个人才可以收件并把邮件打开。发件地址和收件地址可以认为是收发双方的一种“标识符”，同样的我们也可以为网络中的设备分配不同的标识符，这称为设备的<strong>物理地址</strong>或<strong>MAC地址</strong>。</p>
@@ -268,7 +268,7 @@
 <h3 id="hub">Hub</h3>
 <p>在行为层面上，我们的以太网已经可以愉快地运行，但是还存在一个实现上的小问题：市面上并没有三个接头的网线，所以Clarlie要怎么把他的网线接在Alice与Bob之间已经存在的网线上呢？</p>
 <p>解决这一问题的是一种很简单的网络设备：以太网Hub</p>
-<p><img src="https://file.qh2333.com/blog_cache/tangible-network-01/4_port_netgear_ethernet_hub.jpg" alt="Figure 6. 以太网Hub"/></p>
+<p><img src="4_port_netgear_ethernet_hub.jpg" alt="Figure 6. 以太网Hub"/></p>
 <p>如果你认识交换机的话，可能会觉得Hub和交换机外观很相似。就功能上而言，二者确实很相似，他们都把多台计算机接入同一个以太网中。但细究起来，Hub是一种比交换机古老得多的设备（以至于现在几乎已经不再使用了），它的内部结构极其简单：只是<strong>把每个双绞线插口中的8根线，分别连接到一起</strong>。这是一种纯物理层面的设备，使用最直接的方式连接了以太网。</p>
 <p>到此为止，就是以太网最基础的运行原理。</p>
 

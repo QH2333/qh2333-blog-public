@@ -28,20 +28,20 @@
 <meta property="og:site_name" content="QH2333&#39;s blog">
 <meta property="og:description" content="百兆网线遇见千兆入户。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology1.svg">
-<meta property="og:image" content="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology2.svg">
-<meta property="og:image" content="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology2.1.svg">
-<meta property="og:image" content="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/speedtest_in_sg.jpg">
-<meta property="og:image" content="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology3.svg">
-<meta property="og:image" content="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/ZXHN.png">
-<meta property="og:image" content="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology4.svg">
-<meta property="og:image" content="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology4.1.svg">
+<meta property="og:image" content="https://qh2333.github.io/qh2333-blog-public/2020/02/12/upgrading-to-gigabit-lan/Topology1.svg">
+<meta property="og:image" content="https://qh2333.github.io/qh2333-blog-public/2020/02/12/upgrading-to-gigabit-lan/Topology2.svg">
+<meta property="og:image" content="https://qh2333.github.io/qh2333-blog-public/2020/02/12/upgrading-to-gigabit-lan/Topology2.1.svg">
+<meta property="og:image" content="https://qh2333.github.io/qh2333-blog-public/2020/02/12/upgrading-to-gigabit-lan/speedtest_in_sg.jpg">
+<meta property="og:image" content="https://qh2333.github.io/qh2333-blog-public/2020/02/12/upgrading-to-gigabit-lan/Topology3.svg">
+<meta property="og:image" content="https://qh2333.github.io/qh2333-blog-public/2020/02/12/upgrading-to-gigabit-lan/ZXHN.png">
+<meta property="og:image" content="https://qh2333.github.io/qh2333-blog-public/2020/02/12/upgrading-to-gigabit-lan/Topology4.svg">
+<meta property="og:image" content="https://qh2333.github.io/qh2333-blog-public/2020/02/12/upgrading-to-gigabit-lan/Topology4.1.svg">
 <meta property="article:published_time" content="2020-02-12T13:15:00.000Z">
-<meta property="article:modified_time" content="2020-11-14T14:29:46.641Z">
+<meta property="article:modified_time" content="2021-09-05T09:28:04.883Z">
 <meta property="article:author" content="QH2333">
 <meta property="article:tag" content="网络">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology1.svg">
+<meta name="twitter:image" content="https://qh2333.github.io/qh2333-blog-public/2020/02/12/upgrading-to-gigabit-lan/Topology1.svg">
 
 <link rel="canonical" href="https://qh2333.github.io/qh2333-blog-public/2020/02/12/upgrading-to-gigabit-lan/">
 
@@ -200,7 +200,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-14 22:29:46" itemprop="dateModified" datetime="2020-11-14T22:29:46+08:00">2020-11-14</time>
+                <time title="修改时间：2021-09-05 17:28:04" itemprop="dateModified" datetime="2021-09-05T17:28:04+08:00">2021-09-05</time>
               </span>
 
           
@@ -221,7 +221,7 @@
 <h2 id="开始的时候">开始的时候</h2>
 <p>在很久以前，没有“提速降费”的黑暗年代里，我在家里一直用着广电和移动给穷人提供的小水管宽带。十多年来，网速从2Mbps磕磕绊绊提升到了2019年中旬的50Mbps。</p>
 <p>那个时候，家里的网络结构大概是这个样子的：</p>
-<p><img src="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology1.svg" alt="P1. 网络拓扑1.0"/></p>
+<p><img src="Topology1.svg" alt="P1. 网络拓扑1.0"/></p>
 <p>有两个地方需要大概说一下。</p>
 <ol type="1">
 <li><p>这图是用Visio画的，虽然用的是最新的2019版本，但是我依然没有找到任何类似于无线路由器的图标。从原理上讲，我们称呼为“无线路由器”的这个东西其实是<strong>极简路由器+交换机+无线AP</strong>的组合，这三个设备由厂家帮我们塞进了一个壳子里，所以在这里我也就画成三样东西的组合了。当然，如果有同学知道Visio怎么画出无线路由器，也可以在评论里告诉我（尽管tkl大佬指出我还没有评论区）。</p></li>
@@ -231,18 +231,18 @@
 <h2 id="事情变得复杂起来">事情变得复杂起来</h2>
 <p>除了一台主力台式机以外，家里还有一台退役的老台式。为了解决我和我爸同时占用电脑的问题，我们决定把老的台式机升级一下硬件继续用起来，位置呢在主卧里。家里的户型是L型的，之前的路由器和老台式机分别在L的两端，中间隔着两堵墙，无线方案行不通。还好装修的时候在墙里预留了网线，我只要去入户信息箱里找到那根网线然后手工压上水晶头就行（信息箱乱得很，辱骂装修施工队），老台式机成功有线连网。</p>
 <p>这时候，爸妈在手机上上网的频率也高了起来，日益增长的网络需求同不充分的无线网络部署之间的矛盾凸显。为了初步解决这个问题，我又在主卧里接上了第二个淘宝爆款路由器，和客厅的主路由器形成级联。</p>
-<p><img src="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology2.svg" alt="P2. 网络拓扑2.0"/></p>
+<p><img src="Topology2.svg" alt="P2. 网络拓扑2.0"/></p>
 <p>淘宝爆款路由器很智能地为我划分了网段，客厅路由器位于<code>192.168.1.0/24</code>，主卧路由器位于<code>192.168.2.0/24</code>。</p>
 <p>其实这套更新过的组网方案多少已经有了些问题，例如主卧内部二级路由的出现，导致连在二级路由上的设备无法在客厅主路由下访问。好在当时我也没有这种互访的需求，只要网络覆盖面积大了，那就皆大欢喜。</p>
 <p>再往后我进了大学，次卧里的书桌上终于不用再堆满文具。在我报到之前，客厅的台式被移到了次卧里，好处是客厅变得宽敞了一些，坏处是隔了一堵墙的无线信号简直无法忍受。此外，我还新买了一台Surface，微软的无线网卡使用体验的确远高于淘宝爆款：同样隔墙，Surface可以正常上网，台式机却经常掉线。</p>
-<p><img src="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology2.1.svg" alt="P3. 网络拓扑2.1"/></p>
+<p><img src="Topology2.1.svg" alt="P3. 网络拓扑2.1"/></p>
 <p>原谅我在图里用了防火墙的图标，但是这堵墙对Wi-Fi的阻隔效果和防火墙实在没差！</p>
 <h2 id="大跃进">大跃进</h2>
 <p>大二暑假去NUS游学了大半个月，肉身翻墙感受到的国外互联网确实让我赞叹。7月4号到的新加坡，从此我体验过的网络速度有了数量级上的飞跃。</p>
-<p><img src="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/speedtest_in_sg.jpg" alt="P4. 国外网速" width="50%"/></p>
+<p><img src="speedtest_in_sg.jpg" alt="P4. 国外网速" width="50%"/></p>
 <p>本来还在可惜回国以后就享受不到又快又好的网络了，没想到回国的第二天移动给我打了个电话，说是家里的网络可以以非常便宜的价格升级到200M。有这种机会当然是不能错过的，移动的工程师第三天就到了我们家里来（感谢提速降费！）。</p>
 <p>经过一番升级，入户宽带提升到了<strong>200M</strong>、有线猫换成了<strong>光猫</strong>、客厅路由器换成了<strong>华为WS5200增强版</strong>。客厅的老路由器运行不太稳定，直接被我扔了。</p>
-<p><img src="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology3.svg" alt="P5. 网络拓扑3.0"/></p>
+<p><img src="Topology3.svg" alt="P5. 网络拓扑3.0"/></p>
 <p>新的路由器同时支持2.4GHz频段和5GHz频段。在可以直视路由器的地方，200M的网速妥妥的；只要一隔着墙，由于无线网卡老化和穿墙两重因素的影响，实际体验感人。2.4GHz的信号可以稳定穿墙，但是速率大打折扣，200M变成20M；5GHz的信号过了堵墙就变得虚无缥缈了，实际体验比2.4GHz下更糟糕。</p>
 <p>暑假在家时间很短，还没有来得及处理这个问题就返校了。</p>
 <h2 id="参数起底">参数起底</h2>
@@ -255,7 +255,7 @@
 <h3 id="移动无线路由光猫">移动无线路由光猫</h3>
 <p>移动送的光猫虽然是新设备，但是行为也十分可疑。猫的型号是<code>ZXHN F663NV3a</code>，是中兴为中国移动提供的定制型号，在转换光信号之外还支持了无线路由器的功能。看起来买一送一是赚爆，但真相总是男默女泪。</p>
 <p>首先登陆进这个光猫，不得不说在0202年看到下面这种登陆界面，视觉冲击力满分。</p>
-<p><img src="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/ZXHN.png" alt="P6. 光猫登陆界面" width="50%"/></p>
+<p><img src="ZXHN.png" alt="P6. 光猫登陆界面" width="50%"/></p>
 <p>默认的用户名和密码在光猫底部，进去以后兜兜转转看了半天，实在不知道光猫里除了<code>Wi-Fi SSID</code>还有什么东西能让我设置。当然，这台光猫的迷惑行为远不止这一处。</p>
 <p>由于光猫包含了路由器的功能，所以背部就像普通路由器那样，是有四个LAN口的。千兆光猫的LAN口总应该是全千兆了吧，事实证明我naive了，因为四个LAN口只有一个是千兆的，剩下三个都是百兆的。</p>
 <p>光猫自带的Wi-Fi功能倒是不比前面的爆款路由器差多少，支持<code>Wi-Fi 4</code>标准、最高<code>2*2 MIMO</code>，偶尔能有<code>150M</code>的连接速度。</p>
@@ -270,11 +270,11 @@
 <p>同时为了解决隔墙Wi-Fi衰减的问题，我直接把华为路由器搬到了次卧，通过墙内走线连上光猫唯一的千兆口，一次性解决次卧内的网络连接问题（再次辱骂施工队留下的混乱信息箱）。至于客厅的无线网，就暂时用光猫上的Wi-Fi了。</p>
 <p>由于光猫上唯一的千兆口被占用，要让新购买的路由器也能享受千兆速率只能再增加一个千兆交换机。狗东上搜索出来一个H3C的桌面五口全千兆交换机，正好打折百元入手。</p>
 <p>硬件升级完后，家里的网络拓扑变成了这个样子。</p>
-<p><img src="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology4.svg" alt="P7. 网络拓扑4.0"/></p>
+<p><img src="Topology4.svg" alt="P7. 网络拓扑4.0"/></p>
 <p>拿<code>ipref3</code>测试了一下网速，有线速度全部在<code>950Mbps</code>左右，主卧和次卧的无线连接速度在<code>250~350Mbps</code>，都属于正常范围（为什么有线都不能到1Gbps？当然是因为<a href="https://blog.qh2333.com/2020/03/11/network-myth/#%E5%A7%8B%E7%BB%88%E8%BE%BE%E4%B8%8D%E5%88%B0%E6%A0%87%E7%A7%B0%E9%80%9F%E7%8E%87%E7%9A%84%E7%BD%91%E7%BB%9C" target="_blank" rel="noopener">overhead</a>啦！）。</p>
 <p>至于设备互访，我们通常有两种方案。高级的方法当然是在路由器上设置静态路由，这样可以让子网间互不干扰。可事实上三个路由器中只有<code>Cisco EA6700</code>可以让我这么设置，所以这个方法行不通。</p>
 <p>第二种方法是把路由器设置为<strong>桥接模式</strong>（相当于弃用路由功能，把路由器变成<strong>交换机和AP</strong>的组合体），正巧<code>Cisco EA6700</code>和<code>华为WS5200</code>都有快捷的桥接模式开关，一键设置完成。这样设置后，家里相当于只剩下了三个交换机，整个网络合并成了一个子网，自然任意两个设备都能互访。</p>
-<p><img src="https://file.qh2333.com/blog_cache/upgrading-to-gigabit-lan/Topology4.1.svg" alt="P8. 网络拓扑4.1"/></p>
+<p><img src="Topology4.1.svg" alt="P8. 网络拓扑4.1"/></p>
 <p>另外这还带来一个好处：由于两个二级路由的<code>DHCP服务器</code>都被关闭，所以所有设备的IP地址都由光猫分配（只有你不能设置关闭DHCP好吗！要能关我肯定让洋垃圾路由器负责DHCP！）。同一个设备拿着同一个MAC地址在全家任意地方接入，都会分配到固定的IP地址。</p>
 <p>关于设备漫游，这套硬件的确是实现不了。虽然看起来整个网络中有唯一的<code>DHCP服务器</code>，并且可以通过把所有AP的SSID和密码设置为相同的值来实现手机的自动选网，但这种方案会因为各种原因导致体验糟糕。目前实用的方案有<code>AC+AP</code>和<code>Mesh</code>两种，这两种都是土豪方案并不适合我，这里就不介绍了。</p>
 <h2 id="后记">后记</h2>
